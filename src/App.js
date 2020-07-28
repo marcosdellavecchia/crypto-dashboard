@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import axios from "axios";
+import NumberFormat from "react-number-format";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cryptos: [],
+    };
+  }
+
+  componentDidMount() {
+    axios
+      .get(
+        "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,DAI,LTC,XRP,DASH&tsyms=USD"
+      )
+      .then((res) => {
+        const cryptos = res.data;
+        console.log(cryptos);
+        this.setState({ cryptos: cryptos });
+      });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        {Object.keys(this.state.cryptos).map((coin) => (
+          <div className="crypto-container" key={coin}>
+            <span className="left">{coin}</span>
+            <span className="right">
+              <NumberFormat
+                value={this.state.cryptos[coin].USD}
+                displayType={"text"}
+                thousandSeparator={"."}
+                decimalSeparator={","}
+                decimalScale={2}
+                prefix={"$"}
+              />
+            </span>
+          </div>
+        ))}
+      </div>
+    );
+  }
 }
-
 export default App;

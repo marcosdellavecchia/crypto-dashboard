@@ -27,7 +27,7 @@ class App extends React.Component {
     return (
       <div className="App">
         {Object.keys(this.state.cryptos).map((coin) => (
-          <div className="crypto-container" key={coin}>
+          <div className="crypto-c- -ontainer" key={coin}>
             <span className="left">{coin}</span>
             <span className="right">
               <NumberFormat

@@ -10,9 +10,20 @@ body {
 
 .cryptos {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   background: white;
   width: 80%;
   margin: 0 auto 4px auto;
   box-shadow: 1px 1px 0 lightgrey;
+}
+
+.coin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin img {
+  width: 25px;
 }

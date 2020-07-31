@@ -12,9 +12,7 @@ class Coins extends React.Component {
 
   componentDidMount() {
     axios
-      .get(
-        "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,DAI,LTC,XRP,DASH&tsyms=USD"
-      )
+      .get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
       .then((res) => {
         const cryptos = res.data;
         console.log(cryptos);
@@ -27,13 +25,19 @@ class Coins extends React.Component {
       <React.Fragment>
         {Object.keys(this.state.cryptos).map((coin) => (
           <div className="container cryptos" key={coin}>
-            <div className="col-md-2">
-              <p>{coin}</p>
+            <div className="col-md-2 coin">
+              <img src={this.state.cryptos[coin].image} alt="Crypto Icon" />
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 coin">
+              <p>{this.state.cryptos[coin].symbol}</p>
+            </div>
+            <div className="col-md-2 coin">
+              <p>{this.state.cryptos[coin].name}</p>
+            </div>
+            <div className="col-md-2 coin">
               <p>
                 <NumberFormat
-                  value={this.state.cryptos[coin].USD}
+                  value={this.state.cryptos[coin].current_price}
                   displayType={"text"}
                   thousandSeparator={"."}
                   decimalSeparator={","}
@@ -42,17 +46,28 @@ class Coins extends React.Component {
                 />
               </p>
             </div>
-            <div className="col-md-2">
-              <p>Columna</p>
+            <div className="col-md-2 coin">
+              <p>
+                <NumberFormat
+                  value={this.state.cryptos[coin].price_change_percentage_24h}
+                  displayType={"text"}
+                  decimalSeparator={"."}
+                  decimalScale={2}
+                  suffix={"%"}
+                />
+              </p>
             </div>
-            <div className="col-md-2">
-              <p>Columna</p>
-            </div>
-            <div className="col-md-2">
-              <p>Columna</p>
-            </div>
-            <div className="col-md-2">
-              <p>Columna</p>
+            <div className="col-md-2 coin">
+              <p>
+                <NumberFormat
+                  value={this.state.cryptos[coin].market_cap}
+                  displayType={"text"}
+                  thousandSeparator={"."}
+                  decimalSeparator={","}
+                  decimalScale={2}
+                  prefix={"$"}
+                />
+              </p>
             </div>
           </div>
         ))}

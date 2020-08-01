@@ -1,6 +1,8 @@
 import React from "react";
 import Coins from "./coins";
 import Header from "./header";
+import Market from "./market";
+import Exchanges from "./exchanges";
 import "./App.css";
 
 class App extends React.Component {
@@ -8,7 +10,8 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Coins />
+        <Market />
+        <Exchanges />
       </div>
     );
   }

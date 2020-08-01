@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,24 +8,5 @@
 
 body {
   background: #f1f1f1 !important;
-}
-
-.cryptos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  width: 80%;
-  margin: 0 auto 4px auto;
-  box-shadow: 1px 1px 0 lightgrey;
-}
-
-.coin {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.coin img {
-  width: 25px;
+  font-family: "Nunito", sans-serif !important;
 }

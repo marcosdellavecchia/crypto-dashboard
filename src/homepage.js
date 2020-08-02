@@ -4,24 +4,17 @@ import Coins from "./coins";
 import Header from "./header";
 import Market from "./market";
 import Exchanges from "./exchanges";
-import Homepage from "./homepage";
+import HomePage from "./";
 import "./App.css";
 
 class App extends React.Component {
   render() {
     return (
-      <Router>
+      <React.Fragment>
         <Header />
         <Market />
-        <Switch>
-          <Route path="/exchanges">
-            <Exchanges />
-          </Route>
-          <Route path="/">
-            <Coins />
-          </Route>
-        </Switch>
-      </Router>
+        <Coins />
+      </React.Fragment>
     );
   }
 }

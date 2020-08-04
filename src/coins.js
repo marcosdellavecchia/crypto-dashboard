@@ -36,7 +36,7 @@ class Coins extends React.Component {
         <div className="container board">
           {Object.keys(this.state.cryptos).map((coin) => (
             <Link
-              to={"/coinpage?" + this.state.cryptos[coin].symbol}
+              to={"/coinpage/" + this.state.cryptos[coin].id}
               style={{ textDecoration: "none" }}
             >
               <div className="cryptos" key={coin}>

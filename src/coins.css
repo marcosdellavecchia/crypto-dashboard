@@ -24,6 +24,7 @@
   height: 55px;
   margin: 0 -15px 1px -15px;
   box-shadow: 0 1px 0 lightgrey;
+  color: #111111;
 }
 
 .cryptos:hover {

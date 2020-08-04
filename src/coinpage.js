@@ -7,24 +7,18 @@ class CoinPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cryptos: [],
+      coin: "",
     };
   }
 
   componentDidMount() {
-    axios
-      .get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
-      .then((res) => {
-        const cryptos = res.data;
-        console.log(cryptos);
-        this.setState({ cryptos: cryptos });
-      });
+    let search = this.props.history.location.search;
   }
 
   render() {
     return (
       <React.Fragment>
-        <div className="container board-header"></div>
+        <div className="container board-header">asd</div>
 
         <div className="container board"></div>
       </React.Fragment>

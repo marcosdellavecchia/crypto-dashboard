@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import NumberFormat from "react-number-format";
 import "./coins.css";
 
@@ -34,52 +35,59 @@ class Coins extends React.Component {
         </div>
         <div className="container board">
           {Object.keys(this.state.cryptos).map((coin) => (
-            <div className="cryptos" key={coin}>
-              <div className="col-md-2 coin">
-                <img src={this.state.cryptos[coin].image} alt="Crypto Icon" />
+            <Link
+              to={"/coinpage?" + this.state.cryptos[coin].symbol}
+              style={{ textDecoration: "none" }}
+            >
+              <div className="cryptos" key={coin}>
+                <div className="col-md-2 coin">
+                  <img src={this.state.cryptos[coin].image} alt="Crypto Icon" />
+                </div>
+                <div className="col-md-2 coin">
+                  <p>{this.state.cryptos[coin].symbol.toUpperCase()}</p>
+                </div>
+                <div className="col-md-2 coin">
+                  <p>{this.state.cryptos[coin].name}</p>
+                </div>
+                <div className="col-md-2 coin">
+                  <p>
+                    <NumberFormat
+                      value={this.state.cryptos[coin].current_price}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      decimalScale={2}
+                      prefix={"$"}
+                    />
+                  </p>
+                </div>
+                <div className="col-md-2 coin">
+                  <p>
+                    <NumberFormat
+                      value={
+                        this.state.cryptos[coin].price_change_percentage_24h
+                      }
+                      displayType={"text"}
+                      decimalSeparator={"."}
+                      decimalScale={2}
+                      suffix={"%"}
+                    />
+                  </p>
+                </div>
+                <div className="col-md-2 coin">
+                  <p>
+                    <NumberFormat
+                      value={this.state.cryptos[coin].market_cap}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      decimalScale={2}
+                      prefix={"$"}
+                    />
+                  </p>
+                </div>
               </div>
-              <div className="col-md-2 coin">
-                <p>{this.state.cryptos[coin].symbol.toUpperCase()}</p>
-              </div>
-              <div className="col-md-2 coin">
-                <p>{this.state.cryptos[coin].name}</p>
-              </div>
-              <div className="col-md-2 coin">
-                <p>
-                  <NumberFormat
-                    value={this.state.cryptos[coin].current_price}
-                    displayType={"text"}
-                    thousandSeparator={"."}
-                    decimalSeparator={","}
-                    decimalScale={2}
-                    prefix={"$"}
-                  />
-                </p>
-              </div>
-              <div className="col-md-2 coin">
-                <p>
-                  <NumberFormat
-                    value={this.state.cryptos[coin].price_change_percentage_24h}
-                    displayType={"text"}
-                    decimalSeparator={"."}
-                    decimalScale={2}
-                    suffix={"%"}
-                  />
-                </p>
-              </div>
-              <div className="col-md-2 coin">
-                <p>
-                  <NumberFormat
-                    value={this.state.cryptos[coin].market_cap}
-                    displayType={"text"}
-                    thousandSeparator={"."}
-                    decimalSeparator={","}
-                    decimalScale={2}
-                    prefix={"$"}
-                  />
-                </p>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </React.Fragment>

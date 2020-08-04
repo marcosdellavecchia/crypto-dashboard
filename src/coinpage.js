@@ -11,14 +11,12 @@ class CoinPage extends React.Component {
     };
   }
 
-  componentDidMount() {
-    let search = this.props.history.location.search;
-  }
+  componentDidMount() {}
 
   render() {
     return (
       <React.Fragment>
-        <div className="container board-header">asd</div>
+        <div className="container board-header">{window.location.href}</div>
 
         <div className="container board"></div>
       </React.Fragment>

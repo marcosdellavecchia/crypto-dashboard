@@ -34,7 +34,7 @@
   color: #111111;
 }
 
-.center-all {
+.center {
   display: flex;
   justify-content: center;
   align-items: center;

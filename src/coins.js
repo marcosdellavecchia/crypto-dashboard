@@ -38,8 +38,9 @@ class Coins extends React.Component {
             <Link
               to={"/coinpage/" + this.state.cryptos[coin].id}
               style={{ textDecoration: "none" }}
+              key={coin}
             >
-              <div className="cryptos" key={coin}>
+              <div className="cryptos">
                 <div className="col-md-2 coin">
                   <img src={this.state.cryptos[coin].image} alt="Crypto Icon" />
                 </div>

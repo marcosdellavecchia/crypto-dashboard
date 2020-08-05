@@ -56,7 +56,7 @@ class CoinPage extends React.Component {
         </div>
         <div className="container board">
           <div className="row">
-            <div className="col-md-4 center">
+            <div className="col-md-4 center margin15">
               <img
                 className="logo"
                 src={this.state.coindata.image.large}

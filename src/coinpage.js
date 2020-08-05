@@ -56,14 +56,14 @@ class CoinPage extends React.Component {
         </div>
         <div className="container board">
           <div className="row">
-            <div className="col-md-4 center margin15">
+            <div className="col-md-3 centrar margin15">
               <img
                 className="logo"
                 src={this.state.coindata.image.large}
                 alt=""
               />
             </div>
-            <div className="col-md-4 margin15">
+            <div className="col-md-4 centrar-vertical">
               <div className="row">
                 <p>
                   Precio actual:{" "}
@@ -105,7 +105,7 @@ class CoinPage extends React.Component {
               </div>
             </div>
 
-            <div className="col-md-4 margin15">
+            <div className="col-md-4 centrar-vertical">
               <div className="row">
                 <p>
                   Capitalización de mercado:{" "}
@@ -140,8 +140,13 @@ class CoinPage extends React.Component {
             </div>
           </div>
           <hr />
-          <div className="col-md-12 center top15">
-            {this.state.coindata.description.es}
+          <div className="col-md-12 bio">
+            <div
+              contentEditable="false"
+              dangerouslySetInnerHTML={{
+                __html: this.state.coindata.description.es,
+              }}
+            ></div>
           </div>
         </div>
       </React.Fragment>

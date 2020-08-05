@@ -34,10 +34,16 @@
   color: #111111;
 }
 
-.center {
+.centrar {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.centrar-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .margin15 {
@@ -47,4 +53,10 @@
 
 .logo {
   width: 150px;
+}
+
+.bio {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
 }

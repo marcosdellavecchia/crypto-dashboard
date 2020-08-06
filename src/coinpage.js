@@ -49,7 +49,10 @@ class CoinPage extends React.Component {
           <div className="row">
             <div className="col-md-12">
               <h2>
-                {this.state.coindata.name} ({this.state.coindata.symbol})
+                {this.state.coindata.name}{" "}
+                <span className="text-uppercase">
+                  ({this.state.coindata.symbol})
+                </span>
               </h2>
             </div>
           </div>

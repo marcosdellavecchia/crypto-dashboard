@@ -27,6 +27,7 @@ class Header extends React.Component {
               🚀
             </span>
           </h1>
+          <div className="col-md-4"></div>
         </div>
       </div>
     );

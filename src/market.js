@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import NumberFormat from "react-number-format";
 import "./market.css";
 
 class Market extends React.Component {
@@ -36,7 +37,16 @@ class Market extends React.Component {
           </div>
           <div className="market-item">
             <h4>Variación total (últ. 24h)</h4>
-            <p>{this.state.global.market_cap_change_percentage_24h_usd}%</p>
+            <p>
+              <NumberFormat
+                value={this.state.global.market_cap_change_percentage_24h_usd}
+                displayType={"text"}
+                thousandSeparator={"."}
+                decimalSeparator={","}
+                decimalScale={4}
+                suffix={"%"}
+              />
+            </p>
           </div>
         </div>
       </div>

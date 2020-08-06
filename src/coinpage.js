@@ -67,40 +67,47 @@ class CoinPage extends React.Component {
               <div className="row">
                 <p>
                   Precio actual:{" "}
-                  <NumberFormat
-                    value={this.state.coindata.market_data.current_price.usd}
-                    displayType={"text"}
-                    thousandSeparator={"."}
-                    decimalSeparator={","}
-                    decimalScale={2}
-                    prefix={"$"}
-                  />
+                  <strong>
+                    <NumberFormat
+                      value={this.state.coindata.market_data.current_price.usd}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      decimalScale={2}
+                      prefix={"$"}
+                    />{" "}
+                  </strong>
                 </p>
               </div>
               <div className="row">
                 <p>
                   Precio máx. ult. 24 horas:{" "}
-                  <NumberFormat
-                    value={this.state.coindata.market_data.high_24h.usd}
-                    displayType={"text"}
-                    thousandSeparator={"."}
-                    decimalSeparator={","}
-                    decimalScale={2}
-                    prefix={"$"}
-                  />
+                  <strong>
+                    <NumberFormat
+                      value={this.state.coindata.market_data.high_24h.usd}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      decimalScale={2}
+                      prefix={"$"}
+                    />
+                  </strong>
                 </p>
               </div>
               <div className="row">
                 <p>
                   Precio min. ult. 24 horas:{" "}
-                  <NumberFormat
-                    value={this.state.coindata.market_data.low_24h.usd}
-                    displayType={"text"}
-                    thousandSeparator={"."}
-                    decimalSeparator={","}
-                    decimalScale={2}
-                    prefix={"$"}
-                  />
+                  <strong>
+                    {" "}
+                    <NumberFormat
+                      value={this.state.coindata.market_data.low_24h.usd}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      decimalScale={2}
+                      prefix={"$"}
+                    />
+                  </strong>
                 </p>
               </div>
             </div>
@@ -109,20 +116,24 @@ class CoinPage extends React.Component {
               <div className="row">
                 <p>
                   Capitalización de mercado:{" "}
-                  <NumberFormat
-                    value={this.state.coindata.market_data.market_cap.usd}
-                    displayType={"text"}
-                    thousandSeparator={"."}
-                    decimalSeparator={","}
-                    decimalScale={2}
-                    prefix={"$"}
-                  />
+                  <strong>
+                    <NumberFormat
+                      value={this.state.coindata.market_data.market_cap.usd}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      decimalScale={2}
+                      prefix={"$"}
+                    />
+                  </strong>
                 </p>
               </div>
               <div className="row">
                 <p>
                   Ranking según capitalización: #
-                  {this.state.coindata.market_data.market_cap_rank}
+                  <strong>
+                    {this.state.coindata.market_data.market_cap_rank}
+                  </strong>
                 </p>
               </div>
               <div className="row">

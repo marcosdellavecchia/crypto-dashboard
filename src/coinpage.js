@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import NumberFormat from "react-number-format";
+import Loading from "./loading";
 import "./coinpage.css";
 
 class CoinPage extends React.Component {
@@ -21,6 +22,7 @@ class CoinPage extends React.Component {
           homepage: "",
         },
       },
+      loading: true,
     };
   }
 
@@ -38,13 +40,14 @@ class CoinPage extends React.Component {
       .then((res) => {
         const coindata = res.data;
         console.log("esto es coin data", coindata);
-        this.setState({ coindata: coindata });
+        this.setState({ coindata: coindata, loading: false });
       });
   }
 
   render() {
     return (
       <React.Fragment>
+        {this.state.loading && <Loading />}
         <div className="container board-header">
           <div className="row">
             <div className="col-md-12">

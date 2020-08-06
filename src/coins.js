@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import NumberFormat from "react-number-format";
+import Loading from "./loading";
 import "./coins.css";
 
 class Coins extends React.Component {
@@ -9,8 +10,18 @@ class Coins extends React.Component {
     super(props);
     this.state = {
       cryptos: [],
+      loading: true,
     };
   }
+
+  // numberColor = () => {
+  //   const number = document.getElementById("var24h");
+  //   if (number.value > 0) {
+  //     number.classList.add("positive");
+  //   } else if (number.value < 0) {
+  //     number.classList.add("negative");
+  //   }
+  // };
 
   componentDidMount() {
     axios
@@ -18,13 +29,14 @@ class Coins extends React.Component {
       .then((res) => {
         const cryptos = res.data;
         console.log(cryptos);
-        this.setState({ cryptos: cryptos });
+        this.setState({ cryptos: cryptos, loading: false });
       });
   }
 
   render() {
     return (
       <React.Fragment>
+        {this.state.loading && <Loading />}
         <div className="container board-header">
           <div className="col-md-2">Logo</div>
           <div className="col-md-2">Símbolo</div>
@@ -63,8 +75,13 @@ class Coins extends React.Component {
                   </p>
                 </div>
                 <div className="col-md-2 coin">
-                  <p>
+                  <p
+                    style={{
+                      color: NumberFormat < 0 ? "red" : "green",
+                    }}
+                  >
                     <NumberFormat
+                      id="var24h"
                       value={
                         this.state.cryptos[coin].price_change_percentage_24h
                       }

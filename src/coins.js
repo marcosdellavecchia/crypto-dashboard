@@ -14,15 +14,6 @@ class Coins extends React.Component {
     };
   }
 
-  // numberColor = () => {
-  //   const number = document.getElementById("var24h");
-  //   if (number.value > 0) {
-  //     number.classList.add("positive");
-  //   } else if (number.value < 0) {
-  //     number.classList.add("negative");
-  //   }
-  // };
-
   componentDidMount() {
     axios
       .get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
@@ -75,13 +66,16 @@ class Coins extends React.Component {
                   </p>
                 </div>
                 <div className="col-md-2 coin">
-                  <p
-                    style={{
-                      color: NumberFormat < 0 ? "red" : "green",
-                    }}
-                  >
+                  <p>
                     <NumberFormat
-                      id="var24h"
+                      //Cambia el color según sea positivo o negativo
+                      style={{
+                        color:
+                          this.state.cryptos[coin].price_change_percentage_24h >
+                          0
+                            ? "green"
+                            : "red",
+                      }}
                       value={
                         this.state.cryptos[coin].price_change_percentage_24h
                       }

@@ -64,7 +64,6 @@ class CoinPage extends React.Component {
           chartValues.push(item[1]);
           return chartValues;
         });
-        console.log("esto es chartValues", chartValues);
         this.setState({
           chartValues: chartValues,
           loading: false,
@@ -88,10 +87,10 @@ class CoinPage extends React.Component {
         backgroundColor: gradient,
         datasets: [
           {
-            label: "Precio",
+            label: "Precio de " + this.state.coindata.name + " (USD)",
             data: this.state.chartValues,
-            fill: false,
-            borderColor: "rgb(75, 192, 192)",
+            fill: true,
+            borderColor: "rgb(60, 120, 230)",
           },
         ],
       };
@@ -209,7 +208,7 @@ class CoinPage extends React.Component {
             </div>
           </div>
           <hr />
-          <div className="col-md-12">
+          <div className="col-md-12 chart">
             {
               <Line
                 data={chartData}

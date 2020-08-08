@@ -4,7 +4,7 @@ Dependencias utilizadas:
 
 - react-number-format
 - axios
-- reach-chartjs-2
+- react-chartjs-2
 
 Como funciona el gráfico:
 

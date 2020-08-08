@@ -76,9 +76,9 @@ class CoinPage extends React.Component {
       const ctx = canvas.getContext("2d");
       const gradient = ctx.createLinearGradient(0, 0, 100, 0);
 
-      // Cantidad de dias que se muestran en el eje X (seteado en 120)
+      // Cantidad de dias que se muestran en el eje X (igual a la longitud de chartValues)
       var chartDays = [];
-      for (var i = 1; i <= 120; i++) {
+      for (var i = 1; i <= this.state.chartValues.length; i++) {
         chartDays.push(i);
       }
 

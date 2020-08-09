@@ -40,3 +40,19 @@
 .coin img {
   width: 28px;
 }
+
+/* Oculta la columna de capitalización en pantallas inferiores a 992 px */
+@media only screen and (max-width: 991px) {
+  #coin-marketcap {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .board-header div {
+    font-size: 13px;
+  }
+  .coin p {
+    font-size: 14px;
+  }
+}

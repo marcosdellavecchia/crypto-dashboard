@@ -24,7 +24,7 @@ class Market extends React.Component {
       <div className="market-box">
         <div className="container market-data">
           <div className="market-item">
-            <h4>Monedas activas</h4>
+            <h4>Monedas</h4>
             <p>{this.state.global.active_cryptocurrencies}</p>
           </div>
           <div className="market-item">
@@ -36,7 +36,7 @@ class Market extends React.Component {
             <p>{this.state.global.markets}</p>
           </div>
           <div className="market-item">
-            <h4>Variación total (24h)</h4>
+            <h4>Variación (ult. 24h)</h4>
             <p>
               <NumberFormat
                 value={this.state.global.market_cap_change_percentage_24h_usd}

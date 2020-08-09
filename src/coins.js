@@ -33,8 +33,10 @@ class Coins extends React.Component {
           <div className="col-md-2">Símbolo</div>
           <div className="col-md-2">Nombre</div>
           <div className="col-md-2">Cotización</div>
-          <div className="col-md-2">Variación (Últ. 24h)</div>
-          <div className="col-md-2">Capitalización</div>
+          <div className="col-md-2">Variación (24h)</div>
+          <div id="coin-marketcap" className="col-md-2">
+            Capitalización
+          </div>
         </div>
         <div className="container board">
           {Object.keys(this.state.cryptos).map((coin) => (
@@ -86,7 +88,7 @@ class Coins extends React.Component {
                     />
                   </p>
                 </div>
-                <div className="col-md-2 coin">
+                <div id="coin-marketcap" className="col-md-2 coin">
                   <p>
                     <NumberFormat
                       value={this.state.cryptos[coin].market_cap}

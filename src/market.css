@@ -53,22 +53,18 @@
   .market-item h4 {
     font-size: 14px;
   }
-
   .market-item p {
     font-size: 14px;
   }
 }
-
 @media only screen and (max-width: 575px) {
   .market-item h4 {
     font-size: 14px;
   }
-
   .market-item p {
     font-size: 14px;
   }
 }
-
 @media only screen and (max-width: 480px) {
   .market-item h4 {
     font-size: 12px;

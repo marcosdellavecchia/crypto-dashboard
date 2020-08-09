@@ -36,7 +36,7 @@ class Market extends React.Component {
             <p>{this.state.global.markets}</p>
           </div>
           <div className="market-item">
-            <h4>Variación total (últ. 24h)</h4>
+            <h4>Variación total (24h)</h4>
             <p>
               <NumberFormat
                 value={this.state.global.market_cap_change_percentage_24h_usd}

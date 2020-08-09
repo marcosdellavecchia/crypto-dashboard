@@ -1,34 +1,25 @@
-.header {
+.header-wrapper {
   background-color: #ffffff;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar {
-  line-height: 45px;
-}
-.navbar ul {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style-type: none;
-}
-
-.navbar li {
-  margin-right: 20px;
-  font-size: 14px;
-  color: #222222;
 }
 
 .title {
   text-align: center;
   color: #222222;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 60px;
+  vertical-align: middle;
 }
 
-select {
-  border: none;
+.nav-link {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focusring-color;
+}
+
+.navbar-toggler {
+  border: 0px;
 }

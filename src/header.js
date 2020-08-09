@@ -5,30 +5,44 @@ import "./header.css";
 class Header extends React.Component {
   render() {
     return (
-      <div className="container-fluid header">
-        <div className="container row">
-          <nav className="navbar col-md-4">
-            <ul>
-              <Link to="/">
-                <li>Monedas</li>
-              </Link>
-              <Link to="/exchanges">
-                <li>Exchanges</li>
-              </Link>
-              <li>
-                USD
-                <select></select>
-              </li>
-            </ul>
+      <div className="header-wrapper">
+        <section id="nav-bar">
+          <nav className="navbar navbar-expand-lg navbar-light container header">
+            <Link to="/">
+              <h1 className="navbar-brand title">
+                Crypto Dashboard{" "}
+                <span role="img" aria-label="Rocket">
+                  🚀
+                </span>
+              </h1>
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i className="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">
+                    Monedas
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/exchanges">
+                    Exchanges
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </nav>
-          <h1 className="title col-md-4">
-            Crypto Dashboard{" "}
-            <span role="img" aria-label="Rocket">
-              🚀
-            </span>
-          </h1>
-          <div className="col-md-4"></div>
-        </div>
+        </section>
       </div>
     );
   }

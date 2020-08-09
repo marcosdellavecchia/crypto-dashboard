@@ -1,10 +1,13 @@
 # crypto-dashboard
 
-Dependencias utilizadas:
+Liberías utilizadas:
 
 - react-number-format
 - axios
 - react-chartjs-2
+- bootstrap
+- jquery (para las funcionalidades de Javascript en Bootstrap)
+- font-awesome icons
 
 Como funciona el gráfico:
 

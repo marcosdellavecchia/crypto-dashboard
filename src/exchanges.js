@@ -26,17 +26,23 @@ class Exchanges extends React.Component {
       <React.Fragment>
         {this.state.loading && <Loading />}
         <div className="container board-header">
-          <div className="col-md-1">Ranking</div>
+          <div id="exchange-ranking" className="col-md-1">
+            Ranking
+          </div>
           <div className="col-md-1">Logo</div>
           <div className="col-md-3">Nombre</div>
-          <div className="col-md-3">Ubicación</div>
-          <div className="col-md-1">Año</div>
+          <div id="exchange-country" className="col-md-3">
+            Ubicación
+          </div>
+          <div id="exchange-year" className="col-md-1">
+            Año
+          </div>
           <div className="col-md-3">Volumen (últ. 24h)</div>
         </div>
         <div className="container board">
           {Object.keys(this.state.exchanges).map((coin) => (
             <div className="exchanges" key={coin}>
-              <div className="col-md-1 exchange">
+              <div id="exchange-ranking" className="col-md-1 exchange">
                 <p>{this.state.exchanges[coin].trust_score_rank}</p>
               </div>
               <div className="col-md-1 exchange">
@@ -48,10 +54,10 @@ class Exchanges extends React.Component {
               <div className="col-md-3 exchange">
                 <p>{this.state.exchanges[coin].name}</p>
               </div>
-              <div className="col-md-3 exchange">
+              <div id="exchange-country" className="col-md-3 exchange">
                 <p>{this.state.exchanges[coin].country}</p>
               </div>
-              <div className="col-md-1 exchange">
+              <div id="exchange-year" className="col-md-1 exchange">
                 <p>{this.state.exchanges[coin].year_established}</p>
               </div>
               <div className="col-md-3 exchange">

@@ -40,3 +40,21 @@
   width: 32px;
   border-radius: 50%;
 }
+
+/* Oculta la columna ranking, pais y año en pantallas inferiores a 767 px */
+@media only screen and (max-width: 767px) {
+  #exchange-ranking,
+  #exchange-year,
+  #exchange-country {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .board-header div {
+    font-size: 13px;
+  }
+  .coin p {
+    font-size: 14px;
+  }
+}

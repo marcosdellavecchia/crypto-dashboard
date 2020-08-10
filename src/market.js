@@ -14,7 +14,6 @@ class Market extends React.Component {
   componentDidMount() {
     axios.get("https://api.coingecko.com/api/v3/global").then((res) => {
       const global = res.data.data;
-      console.log(global);
       this.setState({ global: global });
     });
   }

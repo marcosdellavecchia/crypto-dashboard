@@ -16,7 +16,6 @@ class Exchanges extends React.Component {
   componentDidMount() {
     axios.get("https://api.coingecko.com/api/v3/exchanges").then((res) => {
       const exchanges = res.data;
-      console.log("Estos son los exchanges", exchanges);
       this.setState({ exchanges: exchanges, loading: false });
     });
   }

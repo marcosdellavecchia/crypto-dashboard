@@ -19,7 +19,6 @@ class Coins extends React.Component {
       .get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
       .then((res) => {
         const cryptos = res.data;
-        console.log(cryptos);
         this.setState({ cryptos: cryptos, loading: false });
       });
   }

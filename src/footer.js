@@ -74,7 +74,7 @@ class Footer extends React.Component {
 
           <div className="footer-item">
             <h6>CRÉDITOS</h6>
-            <p className="credits">
+            <p>
               Hecho con{" "}
               <span role="img" aria-hidden="true">
                 💙

@@ -30,7 +30,9 @@ class Coins extends React.Component {
         {this.state.loading && <Loading />}
         <div className="container board-header">
           <div className="col-md-2">Logo</div>
-          <div className="col-md-2">Símbolo</div>
+          <div id="coin-symbol" className="col-md-2">
+            Símbolo
+          </div>
           <div className="col-md-2">Nombre</div>
           <div className="col-md-2">Cotización</div>
           <div className="col-md-2">Variación (24h)</div>
@@ -49,7 +51,7 @@ class Coins extends React.Component {
                 <div className="col-md-2 coin">
                   <img src={this.state.cryptos[coin].image} alt="Crypto Icon" />
                 </div>
-                <div className="col-md-2 coin">
+                <div id="coin-symbol" className="col-md-2 coin">
                   <p>{this.state.cryptos[coin].symbol.toUpperCase()}</p>
                 </div>
                 <div className="col-md-2 coin">

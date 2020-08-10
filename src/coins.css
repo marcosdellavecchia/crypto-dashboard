@@ -41,14 +41,18 @@
   width: 28px;
 }
 
-/* Oculta la columna de capitalización en pantallas inferiores a 992 px */
+/* Oculta la columna de symbol en pantallas inferiores a 992 px */
 @media only screen and (max-width: 991px) {
-  #coin-marketcap {
+  #coin-symbol {
     display: none;
   }
 }
+/* Oculta la columna de symbol y capitalización en pantallas inferiores a 480 px */
 
 @media only screen and (max-width: 480px) {
+  #coin-marketcap {
+    display: none;
+  }
   .board-header div {
     font-size: 13px;
   }

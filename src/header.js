@@ -10,7 +10,7 @@ class Header extends React.Component {
           <nav className="navbar navbar-expand-lg navbar-light container header">
             <Link to="/">
               <h1 className="navbar-brand title">
-                Crypto Dashboard{" "}
+                Cryptoboard Project{" "}
                 <span role="img" aria-label="Rocket">
                   🚀
                 </span>

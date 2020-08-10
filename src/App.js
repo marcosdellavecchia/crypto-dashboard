@@ -5,6 +5,7 @@ import Header from "./header";
 import Market from "./market";
 import Exchanges from "./exchanges";
 import CoinPage from "./coinpage";
+import Footer from "./footer";
 import "./App.css";
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
             <Coins />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     );
   }

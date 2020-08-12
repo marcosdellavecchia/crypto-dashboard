@@ -58,3 +58,13 @@
 .social i {
   margin-right: 10px;
 }
+
+@media only screen and (max-width: 480px) {
+  .footer-item h6 {
+    font-size: 14px;
+  }
+  .footer-item a,
+  .footer-item p {
+    font-size: 12px;
+  }
+}

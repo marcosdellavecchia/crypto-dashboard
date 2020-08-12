@@ -26,7 +26,6 @@ class CoinPage extends React.Component {
       },
       loading: true,
       chartValues: [],
-      chartDates: [],
     };
   }
 
@@ -51,7 +50,7 @@ class CoinPage extends React.Component {
         });
       });
 
-    //Solicita valores de precio y fecha de los últimos 30 días para el chart
+    //Solicita valores de precio de los últimos 30 días para el chart
     axios
       .get(
         "https://api.coingecko.com/api/v3/coins/" +
@@ -60,36 +59,32 @@ class CoinPage extends React.Component {
       )
       .then((res) => {
         const chartInfo = res.data.prices;
-        // Recorre la informacion en res.data.prices y la agrega a un al array chartValues que contiene unicamente los precios que van a graficarse
         const chartValues = [];
+        // Recorre la informacion en res.data.prices y la agrega a un al array chartValues que contiene unicamente los valores que van a graficarse
         chartInfo.map((item, i) => {
           chartValues.push(item[1]);
           return chartValues;
         });
-
-        // Recorre la informacion en res.data.prices y la agrega a un al array chartDates que contiene unicamente las fechas que van a graficarse.
-        const chartDates = [];
-        chartInfo.map((item, i) => {
-          chartDates.push(new Date(item[0]));
-          return chartDates;
-        });
-
         this.setState({
           chartValues: chartValues,
-          chartDates: chartDates,
           loading: false,
         });
       });
   }
 
   render() {
-    // La función "chartData" define los labels y los valores que va a tomar el grafico.
     const chartData = (canvas) => {
       const ctx = canvas.getContext("2d");
       const gradient = ctx.createLinearGradient(0, 0, 100, 0);
 
+      // Cantidad de dias que se muestran en el eje X (igual a la longitud de chartValues)
+      var chartDays = [];
+      for (var i = 1; i <= this.state.chartValues.length; i++) {
+        chartDays.push(i);
+      }
+
       return {
-        labels: this.state.chartDates,
+        labels: chartDays,
         backgroundColor: gradient,
         datasets: [
           {
@@ -214,11 +209,7 @@ class CoinPage extends React.Component {
             </div>
           </div>
           <hr />
-          <h3 className="text-center subtitle">
-            Evolución de {this.state.coindata.name} en los últimos 30 días
-          </h3>
           <div className="col-md-12 chart">
-            {/* Implementación y settings del gráfico*/}
             {
               <Line
                 data={chartData}
@@ -226,19 +217,7 @@ class CoinPage extends React.Component {
                 height={300}
                 options={{
                   maintainAspectRatio: false,
-                  legend: {
-                    display: true,
-                    position: "bottom",
-                  },
                   scales: {
-                    xAxes: [
-                      {
-                        display: false,
-                        ticks: {
-                          display: false,
-                        },
-                      },
-                    ],
                     yAxes: [
                       {
                         type: "linear",

@@ -23,6 +23,11 @@
   font-weight: 600;
 }
 
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .cryptos {
   display: flex;
   justify-content: center;

@@ -9,7 +9,7 @@ class Coins extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cryptos: [],
+      cryptos: {},
       loading: true,
     };
   }

@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 import NumberFormat from "react-number-format";
-import { Line } from "react-chartjs-2";
 import Loading from "./loading";
+import Chart from "./chart";
 import "./coinpage.css";
 
 class CoinPage extends React.Component {
@@ -83,25 +83,6 @@ class CoinPage extends React.Component {
   }
 
   render() {
-    // La función "chartData" define los labels y los valores que va a tomar el grafico.
-    const chartData = (canvas) => {
-      const ctx = canvas.getContext("2d");
-      const gradient = ctx.createLinearGradient(0, 0, 100, 0);
-
-      return {
-        labels: this.state.chartDates,
-        backgroundColor: gradient,
-        datasets: [
-          {
-            label: "Precio de " + this.state.coindata.name + " (USD)",
-            data: this.state.chartValues,
-            fill: true,
-            borderColor: "rgb(60, 120, 230)",
-          },
-        ],
-      };
-    };
-
     return (
       <React.Fragment>
         {this.state.loading && <Loading />}
@@ -218,36 +199,11 @@ class CoinPage extends React.Component {
             Evolución de {this.state.coindata.name} en los últimos 30 días
           </h3>
           <div className="col-md-12 chart">
-            {/* Implementación y settings del gráfico*/}
-            {
-              <Line
-                data={chartData}
-                width={300}
-                height={300}
-                options={{
-                  maintainAspectRatio: false,
-                  legend: {
-                    display: true,
-                    position: "bottom",
-                  },
-                  scales: {
-                    xAxes: [
-                      {
-                        display: false,
-                        ticks: {
-                          display: false,
-                        },
-                      },
-                    ],
-                    yAxes: [
-                      {
-                        type: "linear",
-                      },
-                    ],
-                  },
-                }}
-              />
-            }
+            <Chart
+              dates={this.state.chartDates}
+              prices={this.state.chartValues}
+              coin={this.state.coindata.name}
+            />
           </div>
         </div>
       </React.Fragment>

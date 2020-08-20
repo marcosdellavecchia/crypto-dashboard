@@ -24,7 +24,7 @@ class Footer extends React.Component {
         <div className="container footer-data">
           <div className="footer-item">
             <h6>CRYPTOBOARD PROJECT</h6>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://cryptoboard-project.web.app/">
               Acerca del proyecto
             </a>
             <a

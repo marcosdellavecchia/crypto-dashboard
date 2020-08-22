@@ -9,6 +9,7 @@ class ExchangePage extends React.Component {
     super(props);
     this.state = {
       exchangeData: {},
+      loading: true,
     };
   }
 
@@ -70,9 +71,7 @@ class ExchangePage extends React.Component {
                 <p>
                   Centralizado:
                   <strong>
-                    {this.state.exchangeData.centralized == true && (
-                      <span> Si</span>
-                    )}
+                    {this.state.exchangeData.centralized ? "Si" : "No"}
                   </strong>
                 </p>
               </div>
@@ -114,6 +113,18 @@ class ExchangePage extends React.Component {
               </div>
             </div>
           </div>
+          <br />
+          <hr />
+          <br />
+          <p className="centrar">
+            Estos datos acerca del exchange {this.state.exchangeData.name}{" "}
+            fueron obtenidos a través de la base de datos de CoinGecko.
+          </p>
+          <p className="centrar">
+            Para obtener más información, no olvides visitar el sitio web
+            oficial indicado en la descripción.
+          </p>
+          <br />
         </div>
       </React.Fragment>
     );

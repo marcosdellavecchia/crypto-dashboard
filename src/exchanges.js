@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import NumberFormat from "react-number-format";
+import { Link } from "react-router-dom";
 import Loading from "./loading";
 import "./exchanges.css";
 
@@ -40,38 +41,44 @@ class Exchanges extends React.Component {
         </div>
         <div className="container board">
           {Object.keys(this.state.exchanges).map((coin) => (
-            <div className="exchanges" key={coin}>
-              <div id="exchange-ranking" className="col-md-1 exchange">
-                <p>{this.state.exchanges[coin].trust_score_rank}</p>
-              </div>
-              <div className="col-md-1 exchange">
-                <img
-                  src={this.state.exchanges[coin].image}
-                  alt="Exchange logo"
-                />
-              </div>
-              <div className="col-md-3 exchange">
-                <p>{this.state.exchanges[coin].name}</p>
-              </div>
-              <div id="exchange-country" className="col-md-3 exchange">
-                <p>{this.state.exchanges[coin].country}</p>
-              </div>
-              <div id="exchange-year" className="col-md-1 exchange">
-                <p>{this.state.exchanges[coin].year_established}</p>
-              </div>
-              <div className="col-md-3 exchange">
-                <p>
-                  <NumberFormat
-                    value={this.state.exchanges[coin].trade_volume_24h_btc}
-                    displayType={"text"}
-                    thousandSeparator={"."}
-                    decimalSeparator={","}
-                    decimalScale={2}
-                    prefix={"BTC "}
+            <Link
+              to={"/exchangepage/" + this.state.exchanges[coin].id}
+              style={{ textDecoration: "none" }}
+              key={coin}
+            >
+              <div className="exchanges" key={coin}>
+                <div id="exchange-ranking" className="col-md-1 exchange">
+                  <p>{this.state.exchanges[coin].trust_score_rank}</p>
+                </div>
+                <div className="col-md-1 exchange">
+                  <img
+                    src={this.state.exchanges[coin].image}
+                    alt="Exchange logo"
                   />
-                </p>
+                </div>
+                <div className="col-md-3 exchange">
+                  <p>{this.state.exchanges[coin].name}</p>
+                </div>
+                <div id="exchange-country" className="col-md-3 exchange">
+                  <p>{this.state.exchanges[coin].country}</p>
+                </div>
+                <div id="exchange-year" className="col-md-1 exchange">
+                  <p>{this.state.exchanges[coin].year_established}</p>
+                </div>
+                <div className="col-md-3 exchange">
+                  <p>
+                    <NumberFormat
+                      value={this.state.exchanges[coin].trade_volume_24h_btc}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      decimalScale={2}
+                      prefix={"BTC "}
+                    />
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </React.Fragment>

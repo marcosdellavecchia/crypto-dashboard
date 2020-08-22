@@ -5,6 +5,7 @@ import Header from "./header";
 import Market from "./market";
 import Exchanges from "./exchanges";
 import CoinPage from "./coinpage";
+import ExchangePage from "./exchangepage";
 import Footer from "./footer";
 import "./App.css";
 
@@ -15,6 +16,9 @@ class App extends React.Component {
         <Header />
         <Market />
         <Switch>
+          <Route path="/exchangepage">
+            <ExchangePage />
+          </Route>
           <Route path="/exchanges">
             <Exchanges />
           </Route>

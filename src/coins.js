@@ -54,7 +54,7 @@ class Coins extends React.Component {
                   <p>{this.state.cryptos[coin].symbol.toUpperCase()}</p>
                 </div>
                 <div className="col-md-2 coin">
-                  <p>{this.state.cryptos[coin].name}</p>
+                  <p>{this.state.cryptos[coin].name.substring(0, 15)}</p>
                 </div>
                 <div className="col-md-2 coin">
                   <p>

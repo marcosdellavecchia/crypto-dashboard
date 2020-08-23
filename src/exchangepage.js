@@ -46,7 +46,7 @@ class ExchangePage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container board padding15">
+        <div className="container board padding30">
           <div className="row">
             <div className="col-md-3 centrar margin15">
               <img
@@ -55,7 +55,7 @@ class ExchangePage extends React.Component {
                 alt=""
               />
             </div>
-            <div className="col-md-4 centrar-vertical">
+            <div className="col-md-4 exchange-page centrar-vertical">
               <div className="row">
                 <p>
                   Ubicación: <strong>{this.state.exchangeData.country}</strong>
@@ -69,7 +69,7 @@ class ExchangePage extends React.Component {
               </div>
               <div className="row">
                 <p>
-                  Centralizado:
+                  Centralizado:{" "}
                   <strong>
                     {this.state.exchangeData.centralized ? "Si" : "No"}
                   </strong>
@@ -77,7 +77,7 @@ class ExchangePage extends React.Component {
               </div>
             </div>
 
-            <div className="col-md-4 centrar-vertical">
+            <div className="col-md-4 exchange-page centrar-vertical">
               <div className="row">
                 <p>
                   Volúmen (últ 24h):{" "}
@@ -113,14 +113,13 @@ class ExchangePage extends React.Component {
               </div>
             </div>
           </div>
-          <br />
           <hr />
           <br />
-          <p className="centrar">
+          <p className="text-center">
             Estos datos acerca del exchange {this.state.exchangeData.name}{" "}
             fueron obtenidos a través de la base de datos de CoinGecko.
           </p>
-          <p className="centrar">
+          <p className="text-center">
             Para obtener más información, no olvides visitar el sitio web
             oficial indicado en la descripción.
           </p>

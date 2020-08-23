@@ -98,7 +98,7 @@ class CoinPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container board">
+        <div className="container board padding30">
           <div className="row">
             <div className="col-md-3 centrar margin15">
               <img
@@ -108,7 +108,7 @@ class CoinPage extends React.Component {
               />
             </div>
             <div className="col-md-4 centrar-vertical">
-              <div className="row">
+              <div className="row coin-page">
                 <p>
                   Precio actual:{" "}
                   <strong>
@@ -123,7 +123,7 @@ class CoinPage extends React.Component {
                   </strong>
                 </p>
               </div>
-              <div className="row">
+              <div className="row coin-page">
                 <p>
                   Precio máx. ult. 24 horas:{" "}
                   <strong>
@@ -138,7 +138,7 @@ class CoinPage extends React.Component {
                   </strong>
                 </p>
               </div>
-              <div className="row">
+              <div className="row coin-page">
                 <p>
                   Precio min. ult. 24 horas:{" "}
                   <strong>
@@ -157,7 +157,7 @@ class CoinPage extends React.Component {
             </div>
 
             <div className="col-md-4 centrar-vertical">
-              <div className="row">
+              <div className="row coin-page">
                 <p>
                   Capitalización de mercado:{" "}
                   <strong>
@@ -172,7 +172,7 @@ class CoinPage extends React.Component {
                   </strong>
                 </p>
               </div>
-              <div className="row">
+              <div className="row coin-page">
                 <p>
                   Ranking según capitalización: #
                   <strong>
@@ -180,7 +180,7 @@ class CoinPage extends React.Component {
                   </strong>
                 </p>
               </div>
-              <div className="row">
+              <div className="row coin-page">
                 <p>
                   Sitio oficial:{" "}
                   <a

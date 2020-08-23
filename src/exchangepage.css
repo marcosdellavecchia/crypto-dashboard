@@ -59,9 +59,9 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.padding15 {
-  padding-top: 15px;
-  padding-bottom: 15px;
+.padding30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .exchange-logo {
@@ -71,4 +71,13 @@
 
 .chart {
   padding-bottom: 30px;
+}
+
+/* Centra el contenido en mobile */
+@media only screen and (max-width: 768px) {
+  .exchange-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

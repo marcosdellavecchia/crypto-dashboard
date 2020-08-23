@@ -35,6 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .coin img {
@@ -47,6 +48,16 @@
     display: none;
   }
 }
+
+/* Centra el contenido en mobile */
+@media only screen and (max-width: 768px) {
+  .coin-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* Oculta la columna de symbol y capitalización en pantallas inferiores a 480 px */
 
 @media only screen and (max-width: 480px) {

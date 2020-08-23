@@ -184,6 +184,7 @@ class CoinPage extends React.Component {
                 <p>
                   Sitio oficial:{" "}
                   <a
+                    style={{ fontWeight: 800 }}
                     href={this.state.coindata.links.homepage}
                     target="_blank"
                     rel="noopener noreferrer"

@@ -103,6 +103,7 @@ class ExchangePage extends React.Component {
                 <p>
                   Sitio oficial:{" "}
                   <a
+                    style={{ fontWeight: 800 }}
                     href={this.state.exchangeData.url}
                     target="_blank"
                     rel="noopener noreferrer"

@@ -121,6 +121,7 @@ class ExchangePage extends React.Component {
             </div>
           </div>
           <hr />
+          <br />
           <h3 className="text-center subtitle">
             Detalle de transacciones en {this.state.exchangeData.name}
           </h3>
@@ -130,6 +131,15 @@ class ExchangePage extends React.Component {
           <ExchangeTransactions
             transactions={this.state.exchangeData.tickers}
           />
+          <br />
+          <p className="text-center" style={{ lineHeight: 0.8 }}>
+            Estos datos acerca del exchange {this.state.exchangeData.name}{" "}
+            fueron obtenidos a través de la base de datos de CoinGecko.
+          </p>
+          <p className="text-center" style={{ lineHeight: 0.9 }}>
+            Para obtener más información, no olvides visitar el sitio web
+            oficial indicado en la descripción.
+          </p>
         </div>
       </React.Fragment>
     );

@@ -2,13 +2,16 @@ import React from "react";
 import axios from "axios";
 import NumberFormat from "react-number-format";
 import Loading from "./loading";
+import ExchangeTransactions from "./exchangetransactions";
 import "./exchangepage.css";
 
 class ExchangePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      exchangeData: {},
+      exchangeData: {
+        tickers: [],
+      },
       loading: true,
     };
   }
@@ -39,6 +42,9 @@ class ExchangePage extends React.Component {
     return (
       <React.Fragment>
         {this.state.loading && <Loading />}
+
+        {/* INFORMACION SOBRE EXCHANGE */}
+
         <div className="container board-header">
           <div className="row">
             <div className="col-md-12">
@@ -115,16 +121,15 @@ class ExchangePage extends React.Component {
             </div>
           </div>
           <hr />
-          <br />
-          <p className="text-center">
-            Estos datos acerca del exchange {this.state.exchangeData.name}{" "}
-            fueron obtenidos a través de la base de datos de CoinGecko.
-          </p>
-          <p className="text-center">
-            Para obtener más información, no olvides visitar el sitio web
-            oficial indicado en la descripción.
-          </p>
-          <br />
+          <h3 className="text-center subtitle">
+            Detalle de transacciones en {this.state.exchangeData.name}
+          </h3>
+
+          {/* INFORMACION SOBRE TRANSACCIONES */}
+
+          <ExchangeTransactions
+            transactions={this.state.exchangeData.tickers}
+          />
         </div>
       </React.Fragment>
     );

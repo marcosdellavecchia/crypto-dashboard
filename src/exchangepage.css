@@ -81,3 +81,18 @@
     align-items: center;
   }
 }
+
+/* Oculta la columna bid/ask en pantallas inferiores a 768 px */
+@media only screen and (max-width: 768px) {
+  #exchange-bidask {
+    display: none;
+  }
+}
+
+/* Oculta la columna bid/ask y coin en pantallas inferiores a 480 px */
+@media only screen and (max-width: 480px) {
+  #exchange-bidask,
+  #exchange-coin {
+    display: none;
+  }
+}

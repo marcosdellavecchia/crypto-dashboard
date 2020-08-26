@@ -25,22 +25,23 @@
   font-weight: 600;
 }
 
+.exchanges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  height: 55px;
+  margin: 0 -15px 1px -15px;
+  box-shadow: 0 1px 0 lightgrey;
+  color: #333333;
+}
+
 .subtitle {
   padding-top: 5px;
   padding-bottom: 10px;
   font-size: 18px;
   font-weight: 600;
-}
-
-.cryptos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ffffff;
-  height: 55px;
-  margin: 0 -15px 1px -15px;
-  box-shadow: 0 1px 0 lightgrey;
-  color: #111111;
 }
 
 .centrar {
@@ -67,10 +68,6 @@
 .exchange-logo {
   width: 80px;
   border-radius: 50%;
-}
-
-.chart {
-  padding-bottom: 30px;
 }
 
 /* Centra el contenido en mobile */

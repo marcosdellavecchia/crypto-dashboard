@@ -23,12 +23,10 @@ class ExchangePage extends React.Component {
   };
 
   componentDidMount() {
+    const exchangeID = this.getCryptoId(window.location.href);
     //Solicita info de la coin específica
     axios
-      .get(
-        "https://api.coingecko.com/api/v3/exchanges/" +
-          this.getCryptoId(window.location.href)
-      )
+      .get("https://api.coingecko.com/api/v3/exchanges/" + exchangeID)
       .then((res) => {
         const exchangeData = res.data;
         this.setState({

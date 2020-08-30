@@ -38,6 +38,7 @@ class CoinPage extends React.Component {
 
   componentDidMount() {
     const coinID = this.getCryptoId(window.location.href);
+
     //Solicita info de la coin específica
     axios
       .get("https://api.coingecko.com/api/v3/coins/" + coinID)

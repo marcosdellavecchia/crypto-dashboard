@@ -46,7 +46,8 @@
   color: white;
 }
 
-.footer-item p {
+.footer-item p,
+span {
   font-size: 14px;
   font-weight: 500;
 }
@@ -57,6 +58,10 @@
 
 .social i {
   margin-right: 10px;
+}
+
+.about {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 480px) {

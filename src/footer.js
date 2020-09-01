@@ -23,9 +23,12 @@ class Footer extends React.Component {
               <ModalHeader>¿Qué es Cryptoboard?</ModalHeader>
               <ModalBody>
                 <p>
-                  ¡Hola! Me llamo Marcos 👋, soy programador web y desarrollé
-                  este sitio mientras aprendía React JS e investigaba el mercado
-                  de criptomonedas.
+                  ¡Hola! Me llamo Marcos{" "}
+                  <span role="img" aria-label="Hand">
+                    👋
+                  </span>
+                  , soy programador web y desarrollé este sitio mientras
+                  aprendía React JS e investigaba el mercado de criptomonedas.
                 </p>
                 <p>
                   Si querés dejarme un comentario o sugerencia, podés hacerlo en{" "}
@@ -39,7 +42,11 @@ class Footer extends React.Component {
                 </p>
                 <p>
                   El código es público y podés utilizarlo en tu propio
-                  desarrollo si así lo deseas 💻. Acá te dejo el{" "}
+                  desarrollo si así lo deseas{" "}
+                  <span role="img" aria-label="Laptop">
+                    💻
+                  </span>
+                  . Acá te dejo el{" "}
                   <a
                     href="https://github.com/marcosdellavecchia/crypto-dashboard"
                     target="_blank"

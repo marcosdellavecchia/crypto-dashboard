@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./footer.css";
 
 class Footer extends React.Component {
@@ -20,15 +20,40 @@ class Footer extends React.Component {
               Acerca del proyecto
             </span>
             <Modal isOpen={this.state.isModalOpen}>
-              <ModalHeader>Acerca del proyecto</ModalHeader>
-              <ModalBody>Este es es el body</ModalBody>
+              <ModalHeader>¿Qué es Cryptoboard?</ModalHeader>
+              <ModalBody>
+                <p>
+                  ¡Hola! Me llamo Marcos 👋, soy programador web y desarrollé
+                  este sitio mientras aprendía React JS e investigaba el mercado
+                  de criptomonedas.
+                </p>
+                <p>
+                  Si querés dejarme un comentario o sugerencia, podés hacerlo en{" "}
+                  <a
+                    href="https://twitter.com/marcosdv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>Twitter.</strong>
+                  </a>
+                </p>
+                <p>
+                  El código es público y podés utilizarlo en tu propio
+                  desarrollo si así lo deseas 💻. Acá te dejo el{" "}
+                  <a
+                    href="https://github.com/marcosdellavecchia/crypto-dashboard"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>repositorio de GitHub</strong>
+                  </a>
+                  .
+                </p>
+              </ModalBody>
               <ModalFooter>
-                <button
-                  className="btn-primary modal-return"
-                  onClick={this.openModal}
-                >
+                <Button color="primary" onClick={this.openModal}>
                   Volver al sitio
-                </button>
+                </Button>
               </ModalFooter>
             </Modal>
 

@@ -23,22 +23,22 @@ class Footer extends React.Component {
               <ModalHeader>¿Qué es Cryptoboard?</ModalHeader>
               <ModalBody>
                 <p>
-                  ¡Hola! Me llamo Marcos{" "}
+                  ¡Hola! Soy Marcos{" "}
                   <span role="img" aria-label="Hand">
                     👋
                   </span>
-                  , soy programador web y desarrollé este sitio mientras
-                  aprendía React JS e investigaba el mercado de criptomonedas.
+                  , desarrollé este sitio mientras aprendía React JS e
+                  investigaba el mercado de criptomonedas.
                 </p>
                 <p>
-                  Si querés dejarme un comentario o sugerencia, podés hacerlo en{" "}
-                  <a
-                    href="https://twitter.com/marcosdv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <strong>Twitter.</strong>
-                  </a>
+                  Cryptoboard es una plataforma que permite monitorear en tiempo
+                  real la{" "}
+                  <strong>
+                    cotización y las variaciones de diferentes activos
+                    criptográficos
+                  </strong>
+                  , como así también la actividad en sus correspondientes
+                  mercados
                 </p>
                 <p>
                   El código es público y podés utilizarlo en tu propio

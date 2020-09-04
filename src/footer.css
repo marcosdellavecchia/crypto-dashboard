@@ -33,7 +33,8 @@
   font-size: 14px;
   font-weight: 500;
 }
-.footer-item a {
+.footer-item a,
+.about {
   font-size: 14px;
   font-weight: 500;
   color: rgb(235, 235, 235);
@@ -41,7 +42,8 @@
   display: block;
 }
 
-.footer-item a:hover {
+.footer-item a:hover,
+.about:hover {
   text-decoration: none;
   color: white;
 }

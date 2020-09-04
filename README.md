@@ -9,7 +9,9 @@ Liberías utilizadas:
 - react-number-format
 - axios
 - react-chartjs-2
+- react-router-dom
 - bootstrap
+- reactstrap (para modales)
 - jquery (para las funcionalidades de Javascript en Bootstrap)
 - font-awesome
 

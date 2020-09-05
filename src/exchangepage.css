@@ -37,6 +37,11 @@
   color: #333333;
 }
 
+.crypto-data {
+  font-weight: 800;
+  font-size: 15px;
+}
+
 .subtitle {
   padding-top: 5px;
   padding-bottom: 10px;

@@ -62,21 +62,27 @@ class ExchangePage extends React.Component {
             <div className="col-md-4 exchange-page centrar-vertical">
               <div className="row">
                 <p>
-                  Ubicación: <strong>{this.state.exchangeData.country}</strong>
+                  Ubicación:{" "}
+                  <span className="crypto-data">
+                    {this.state.exchangeData.country}
+                  </span>
                 </p>
               </div>
               <div className="row">
                 <p>
                   Año de creación:
-                  <strong> {this.state.exchangeData.year_established}</strong>
+                  <span className="crypto-data">
+                    {" "}
+                    {this.state.exchangeData.year_established}
+                  </span>
                 </p>
               </div>
               <div className="row">
                 <p>
                   Centralizado:{" "}
-                  <strong>
+                  <span className="crypto-data">
                     {this.state.exchangeData.centralized ? "Si" : "No"}
-                  </strong>
+                  </span>
                 </p>
               </div>
             </div>
@@ -84,30 +90,31 @@ class ExchangePage extends React.Component {
             <div className="col-md-4 exchange-page centrar-vertical">
               <div className="row">
                 <p>
-                  Volúmen (últ 24h):{" "}
-                  <strong>
-                    <NumberFormat
-                      value={this.state.exchangeData.trade_volume_24h_btc}
-                      displayType={"text"}
-                      thousandSeparator={"."}
-                      decimalSeparator={","}
-                      decimalScale={2}
-                      suffix={" BTC"}
-                    />{" "}
-                  </strong>
+                  Volumen (últ 24h):{" "}
+                  <NumberFormat
+                    className="crypto-data"
+                    value={this.state.exchangeData.trade_volume_24h_btc}
+                    displayType={"text"}
+                    thousandSeparator={"."}
+                    decimalSeparator={","}
+                    decimalScale={2}
+                    suffix={" BTC"}
+                  />{" "}
                 </p>
               </div>
               <div className="row">
                 <p>
                   Ranking de confianza: #
-                  <strong>{this.state.exchangeData.trust_score_rank}</strong>
+                  <span className="crypto-data">
+                    {this.state.exchangeData.trust_score_rank}
+                  </span>
                 </p>
               </div>
               <div className="row">
                 <p>
                   Sitio oficial:{" "}
                   <a
-                    style={{ fontWeight: 800 }}
+                    className="crypto-data"
                     href={this.state.exchangeData.url}
                     target="_blank"
                     rel="noopener noreferrer"

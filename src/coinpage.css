@@ -41,6 +41,11 @@
   color: #111111;
 }
 
+.crypto-data {
+  font-weight: 800;
+  font-size: 15px;
+}
+
 .centrar {
   display: flex;
   justify-content: center;

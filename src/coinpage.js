@@ -110,47 +110,43 @@ class CoinPage extends React.Component {
               <div className="row coin-page">
                 <p>
                   Precio actual:{" "}
-                  <strong>
-                    <NumberFormat
-                      value={this.state.coindata.market_data.current_price.usd}
-                      displayType={"text"}
-                      thousandSeparator={"."}
-                      decimalSeparator={","}
-                      decimalScale={2}
-                      prefix={"$"}
-                    />{" "}
-                  </strong>
+                  <NumberFormat
+                    className="crypto-data"
+                    value={this.state.coindata.market_data.current_price.usd}
+                    displayType={"text"}
+                    thousandSeparator={"."}
+                    decimalSeparator={","}
+                    decimalScale={2}
+                    prefix={"$"}
+                  />{" "}
                 </p>
               </div>
               <div className="row coin-page">
                 <p>
                   Precio máx. ult. 24 horas:{" "}
-                  <strong>
-                    <NumberFormat
-                      value={this.state.coindata.market_data.high_24h.usd}
-                      displayType={"text"}
-                      thousandSeparator={"."}
-                      decimalSeparator={","}
-                      decimalScale={2}
-                      prefix={"$"}
-                    />
-                  </strong>
+                  <NumberFormat
+                    className="crypto-data"
+                    value={this.state.coindata.market_data.high_24h.usd}
+                    displayType={"text"}
+                    thousandSeparator={"."}
+                    decimalSeparator={","}
+                    decimalScale={2}
+                    prefix={"$"}
+                  />
                 </p>
               </div>
               <div className="row coin-page">
                 <p>
                   Precio min. ult. 24 horas:{" "}
-                  <strong>
-                    {" "}
-                    <NumberFormat
-                      value={this.state.coindata.market_data.low_24h.usd}
-                      displayType={"text"}
-                      thousandSeparator={"."}
-                      decimalSeparator={","}
-                      decimalScale={2}
-                      prefix={"$"}
-                    />
-                  </strong>
+                  <NumberFormat
+                    className="crypto-data"
+                    value={this.state.coindata.market_data.low_24h.usd}
+                    displayType={"text"}
+                    thousandSeparator={"."}
+                    decimalSeparator={","}
+                    decimalScale={2}
+                    prefix={"$"}
+                  />
                 </p>
               </div>
             </div>
@@ -159,31 +155,30 @@ class CoinPage extends React.Component {
               <div className="row coin-page">
                 <p>
                   Capitalización de mercado:{" "}
-                  <strong>
-                    <NumberFormat
-                      value={this.state.coindata.market_data.market_cap.usd}
-                      displayType={"text"}
-                      thousandSeparator={"."}
-                      decimalSeparator={","}
-                      decimalScale={2}
-                      prefix={"$"}
-                    />
-                  </strong>
+                  <NumberFormat
+                    className="crypto-data"
+                    value={this.state.coindata.market_data.market_cap.usd}
+                    displayType={"text"}
+                    thousandSeparator={"."}
+                    decimalSeparator={","}
+                    decimalScale={2}
+                    prefix={"$"}
+                  />
                 </p>
               </div>
               <div className="row coin-page">
                 <p>
                   Ranking según capitalización: #
-                  <strong>
-                    {this.state.coindata.market_data.market_cap_rank}
-                  </strong>
+                  <span className="crypto-data">
+                    {this.state.coindata.market_data.market_cap_rank}{" "}
+                  </span>
                 </p>
               </div>
               <div className="row coin-page">
                 <p>
                   Sitio oficial:{" "}
                   <a
-                    style={{ fontWeight: 800 }}
+                    className="crypto-data"
                     href={this.state.coindata.links.homepage}
                     target="_blank"
                     rel="noopener noreferrer"

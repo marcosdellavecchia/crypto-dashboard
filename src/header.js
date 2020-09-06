@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import About from "./about";
 import "./header.css";
 
 const Header = () => {
@@ -37,6 +38,11 @@ const Header = () => {
                 <Link className="nav-link" to="/exchanges">
                   Exchanges
                 </Link>
+              </li>
+              <li className="nav-item">
+                <span className="nav-link">
+                  <About initialModalState={false} />
+                </span>
               </li>
             </ul>
           </div>

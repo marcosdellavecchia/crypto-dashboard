@@ -12,7 +12,9 @@ class Footer extends React.Component {
 
             {/* Modal que abre la información del proyecto */}
 
-            <About initialModalState={false} />
+            <span className="about">
+              <About initialModalState={false} />
+            </span>
 
             <a
               href="https://github.com/marcosdellavecchia/crypto-dashboard"

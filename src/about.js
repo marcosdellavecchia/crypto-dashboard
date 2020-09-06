@@ -20,9 +20,7 @@ class About extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <span className="about" onClick={this.toggle}>
-          Acerca de
-        </span>
+        <span onClick={this.toggle}>Acerca de</span>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader>¿Qué es Cryptoboard?</ModalHeader>

@@ -48,12 +48,6 @@
   color: white;
 }
 
-.footer-item p,
-span {
-  font-size: 14px;
-  font-weight: 500;
-}
-
 .social {
   display: flex;
 }

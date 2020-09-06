@@ -38,6 +38,7 @@ class Market extends React.Component {
             <h4>Variación (ult. 24h)</h4>
             <p>
               <NumberFormat
+                className="market-item"
                 value={this.state.global.market_cap_change_percentage_24h_usd}
                 displayType={"text"}
                 thousandSeparator={"."}

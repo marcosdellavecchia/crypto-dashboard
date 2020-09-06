@@ -37,7 +37,7 @@ class Exchanges extends React.Component {
           <div id="exchange-year" className="col-md-1">
             Año
           </div>
-          <div className="col-md-3">Volumen (últ. 24h)</div>
+          <div className="col-md-3">Volumen BTC (últ. 24h)</div>
         </div>
         <div className="container board">
           {Object.keys(this.state.exchanges).map((coin) => (
@@ -73,7 +73,6 @@ class Exchanges extends React.Component {
                       thousandSeparator={"."}
                       decimalSeparator={","}
                       decimalScale={2}
-                      prefix={"BTC "}
                     />
                   </p>
                 </div>

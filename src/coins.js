@@ -10,6 +10,7 @@ class Coins extends React.Component {
     super(props);
     this.state = {
       cryptos: {},
+      results: 30,
       loading: true,
     };
   }
@@ -22,6 +23,16 @@ class Coins extends React.Component {
         this.setState({ cryptos: cryptos, loading: false });
       });
   }
+
+  viewMore = () => {
+    if (this.state.results < 100) {
+      this.setState({ results: this.state.results + 30 });
+      window.scroll(0, window.pageYOffset);
+    } else {
+      this.setState({ results: this.state.results });
+      document.getElementById("view-more-button").className = "none";
+    }
+  };
 
   render() {
     return (
@@ -40,70 +51,85 @@ class Coins extends React.Component {
           </div>
         </div>
         <div className="container board">
-          {Object.keys(this.state.cryptos).map((coin) => (
-            <Link
-              to={"/coinpage/" + this.state.cryptos[coin].id}
-              style={{ textDecoration: "none" }}
-              key={coin}
-            >
-              <div className="cryptos">
-                <div className="col-md-2 coin">
-                  <img src={this.state.cryptos[coin].image} alt="Crypto Icon" />
-                </div>
-                <div id="coin-symbol" className="col-md-2 coin">
-                  <p>{this.state.cryptos[coin].symbol.toUpperCase()}</p>
-                </div>
-                <div className="col-md-2 coin">
-                  <p>{this.state.cryptos[coin].name.substring(0, 15)}</p>
-                </div>
-                <div className="col-md-2 coin">
-                  <p>
-                    <NumberFormat
-                      value={this.state.cryptos[coin].current_price}
-                      displayType={"text"}
-                      thousandSeparator={"."}
-                      decimalSeparator={","}
-                      decimalScale={2}
-                      prefix={"$"}
+          {Object.keys(this.state.cryptos)
+            // Limita la cantidad de resultados al valor alojado en el estado 'results'.
+            .slice(0, this.state.results)
+            .map((coin) => (
+              <Link
+                to={"/coinpage/" + this.state.cryptos[coin].id}
+                style={{ textDecoration: "none" }}
+                key={coin}
+              >
+                <div className="cryptos">
+                  <div className="col-md-2 coin">
+                    <img
+                      src={this.state.cryptos[coin].image}
+                      alt="Crypto Icon"
                     />
-                  </p>
+                  </div>
+                  <div id="coin-symbol" className="col-md-2 coin">
+                    <p>{this.state.cryptos[coin].symbol.toUpperCase()}</p>
+                  </div>
+                  <div className="col-md-2 coin">
+                    <p>{this.state.cryptos[coin].name.substring(0, 15)}</p>
+                  </div>
+                  <div className="col-md-2 coin">
+                    <p>
+                      <NumberFormat
+                        value={this.state.cryptos[coin].current_price}
+                        displayType={"text"}
+                        thousandSeparator={"."}
+                        decimalSeparator={","}
+                        decimalScale={2}
+                        prefix={"$"}
+                      />
+                    </p>
+                  </div>
+                  <div className="col-md-2 coin">
+                    <p>
+                      <NumberFormat
+                        //Cambia el color según sea positivo o negativo
+                        style={{
+                          color:
+                            this.state.cryptos[coin]
+                              .price_change_percentage_24h > 0
+                              ? "green"
+                              : "red",
+                        }}
+                        value={
+                          this.state.cryptos[coin].price_change_percentage_24h
+                        }
+                        displayType={"text"}
+                        decimalSeparator={"."}
+                        decimalScale={2}
+                        suffix={"%"}
+                      />
+                    </p>
+                  </div>
+                  <div id="coin-marketcap" className="col-md-2 coin">
+                    <p>
+                      <NumberFormat
+                        value={this.state.cryptos[coin].market_cap}
+                        displayType={"text"}
+                        thousandSeparator={"."}
+                        decimalSeparator={","}
+                        decimalScale={2}
+                        prefix={"$"}
+                      />
+                    </p>
+                  </div>
                 </div>
-                <div className="col-md-2 coin">
-                  <p>
-                    <NumberFormat
-                      //Cambia el color según sea positivo o negativo
-                      style={{
-                        color:
-                          this.state.cryptos[coin].price_change_percentage_24h >
-                          0
-                            ? "green"
-                            : "red",
-                      }}
-                      value={
-                        this.state.cryptos[coin].price_change_percentage_24h
-                      }
-                      displayType={"text"}
-                      decimalSeparator={"."}
-                      decimalScale={2}
-                      suffix={"%"}
-                    />
-                  </p>
-                </div>
-                <div id="coin-marketcap" className="col-md-2 coin">
-                  <p>
-                    <NumberFormat
-                      value={this.state.cryptos[coin].market_cap}
-                      displayType={"text"}
-                      thousandSeparator={"."}
-                      decimalSeparator={","}
-                      decimalScale={2}
-                      prefix={"$"}
-                    />
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+        </div>
+        <div className="view-more-container">
+          <button
+            onClick={this.viewMore}
+            className="view-more-button"
+            id="view-more-button"
+          >
+            Ver más
+          </button>
         </div>
       </React.Fragment>
     );

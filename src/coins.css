@@ -42,6 +42,27 @@
   width: 28px;
 }
 
+.view-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.view-more-button {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
+  background: rgb(24, 198, 131);
+  border: none;
+  color: white;
+  font-weight: 700;
+  width: 120px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.none {
+  display: none;
+}
+
 /* Oculta la columna de symbol en pantallas inferiores a 992 px */
 @media only screen and (max-width: 991px) {
   #coin-symbol {

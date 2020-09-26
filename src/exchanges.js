@@ -10,6 +10,7 @@ class Exchanges extends React.Component {
     super(props);
     this.state = {
       exchanges: [],
+      results: 30,
       loading: true,
     };
   }
@@ -20,6 +21,17 @@ class Exchanges extends React.Component {
       this.setState({ exchanges: exchanges, loading: false });
     });
   }
+
+  // Función que permite cargar más resultados de exchanges
+  viewMore = () => {
+    if (this.state.results <= 100) {
+      this.setState({ results: this.state.results + 20 });
+      window.scrollBy(0, -252);
+    } else {
+      this.setState({ results: this.state.results });
+      document.getElementById("view-more-button").className = "none";
+    }
+  };
 
   render() {
     return (
@@ -40,45 +52,57 @@ class Exchanges extends React.Component {
           <div className="col-md-3">Volumen BTC (últ. 24h)</div>
         </div>
         <div className="container board">
-          {Object.keys(this.state.exchanges).map((coin) => (
-            <Link
-              to={"/exchangepage/" + this.state.exchanges[coin].id}
-              style={{ textDecoration: "none" }}
-              key={coin}
-            >
-              <div className="exchanges" key={coin}>
-                <div id="exchange-ranking" className="col-md-1 exchange">
-                  <p>{this.state.exchanges[coin].trust_score_rank}</p>
-                </div>
-                <div className="col-md-1 exchange">
-                  <img
-                    src={this.state.exchanges[coin].image}
-                    alt="Exchange logo"
-                  />
-                </div>
-                <div className="col-md-3 exchange">
-                  <p>{this.state.exchanges[coin].name}</p>
-                </div>
-                <div id="exchange-country" className="col-md-3 exchange">
-                  <p>{this.state.exchanges[coin].country}</p>
-                </div>
-                <div id="exchange-year" className="col-md-1 exchange">
-                  <p>{this.state.exchanges[coin].year_established}</p>
-                </div>
-                <div className="col-md-3 exchange">
-                  <p>
-                    <NumberFormat
-                      value={this.state.exchanges[coin].trade_volume_24h_btc}
-                      displayType={"text"}
-                      thousandSeparator={"."}
-                      decimalSeparator={","}
-                      decimalScale={2}
+          {Object.keys(this.state.exchanges)
+            // Limita la cantidad de resultados al valor alojado en el estado 'results'.
+            .slice(0, this.state.results)
+            .map((coin) => (
+              <Link
+                to={"/exchangepage/" + this.state.exchanges[coin].id}
+                style={{ textDecoration: "none" }}
+                key={coin}
+              >
+                <div className="exchanges" key={coin}>
+                  <div id="exchange-ranking" className="col-md-1 exchange">
+                    <p>{this.state.exchanges[coin].trust_score_rank}</p>
+                  </div>
+                  <div className="col-md-1 exchange">
+                    <img
+                      src={this.state.exchanges[coin].image}
+                      alt="Exchange logo"
                     />
-                  </p>
+                  </div>
+                  <div className="col-md-3 exchange">
+                    <p>{this.state.exchanges[coin].name}</p>
+                  </div>
+                  <div id="exchange-country" className="col-md-3 exchange">
+                    <p>{this.state.exchanges[coin].country}</p>
+                  </div>
+                  <div id="exchange-year" className="col-md-1 exchange">
+                    <p>{this.state.exchanges[coin].year_established}</p>
+                  </div>
+                  <div className="col-md-3 exchange">
+                    <p>
+                      <NumberFormat
+                        value={this.state.exchanges[coin].trade_volume_24h_btc}
+                        displayType={"text"}
+                        thousandSeparator={"."}
+                        decimalSeparator={","}
+                        decimalScale={2}
+                      />
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+        </div>
+        <div className="view-more-container">
+          <button
+            onClick={this.viewMore}
+            className="view-more-button"
+            id="view-more-button"
+          >
+            Ver más
+          </button>
         </div>
       </React.Fragment>
     );

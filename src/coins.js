@@ -24,10 +24,11 @@ class Coins extends React.Component {
       });
   }
 
+  // Función que permite cargar más resultados de monedas
   viewMore = () => {
-    if (this.state.results < 100) {
-      this.setState({ results: this.state.results + 30 });
-      window.scroll(0, window.pageYOffset);
+    if (this.state.results <= 100) {
+      this.setState({ results: this.state.results + 20 });
+      window.scrollBy(0, -252);
     } else {
       this.setState({ results: this.state.results });
       document.getElementById("view-more-button").className = "none";

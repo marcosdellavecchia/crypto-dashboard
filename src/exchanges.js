@@ -24,11 +24,12 @@ class Exchanges extends React.Component {
 
   // Función que permite cargar más resultados de exchanges
   viewMore = () => {
-    if (this.state.results <= 100) {
+    if (this.state.results < 90) {
       this.setState({ results: this.state.results + 20 });
-      window.scrollBy(0, -252);
-    } else {
-      this.setState({ results: this.state.results });
+      window.scrollBy(0, -250);
+    } else if (this.state.results >= 90) {
+      this.setState({ results: this.state.results + 20 });
+      window.scrollBy(0, -250);
       document.getElementById("view-more-button").className = "none";
     }
   };

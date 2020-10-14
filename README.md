@@ -2,7 +2,7 @@
 
 ![Cryptoboard Project Logo](https://i.imgur.com/I7sBa8s.png)
 
-### LIVE: https://cryptoboard-project.web.app/
+### 🔴 LIVE: https://cryptoboard-project.web.app/
 
 Cryptoboard es un tablero de criptomonedas con información actualizada construído con React JS. 
 

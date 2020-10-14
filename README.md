@@ -7,7 +7,7 @@
 Cryptoboard es un tablero de criptomonedas con información actualizada construído con React JS. 
 
 ### Funcionalidades
-- Header de información global:
+#### Header de información global:
 - Cantidad de monedas activas
 - ICOs (Initial Coin Offerings) en curso
 - Cantidad de exchanges

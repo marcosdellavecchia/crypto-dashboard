@@ -1,11 +1,19 @@
 # crypto-dashboard
 
-LIVE: https://cryptoboard-project.web.app/
+![Cryptoboard Project Logo](https://i.imgur.com/I7sBa8s.png)
 
-Un tablero de criptomonedas construido utilizando React JS. Muestra información resumida tanto de monedas como de exchanges. Al clickear en cualquier moneda muestra información detallada junto con un gráfico de la evolución en el precio. Al clickear en un exchange, se muestra información acerca del mismo y de las últimas transacciones realizadas.
+### LIVE: https://cryptoboard-project.web.app/
 
-Liberías utilizadas:
+Cryptoboard es un tablero de criptomonedas con información actualizada construído con React JS. 
 
+### Funcionalidades
+- Tablero de criptomonedas:
+- Página de una criptomoneda específica:
+- Tablero de exchanges:
+- Página de un exchange específico:
+- About:
+
+#### Liberías utilizadas:
 - react-number-format
 - axios
 - react-chartjs-2
@@ -15,6 +23,6 @@ Liberías utilizadas:
 - jquery (para las funcionalidades de Javascript en Bootstrap)
 - font-awesome
 
-API utilizada:
+#### API utilizada:
 
 - CoinGecko API v3: https://www.coingecko.com/api/documentations/v3

@@ -8,10 +8,10 @@ Cryptoboard es un tablero de criptomonedas con información actualizada constru�
 
 ### Funcionalidades
 - Header de información global:
-  - Cantidad de monedas activas
-  - ICOs (Initial Coin Offerings) en curso
-  - Cantidad de exchanges
-  - Variación porcentual del mercado en las últimas 24 horas.
+- Cantidad de monedas activas
+- ICOs (Initial Coin Offerings) en curso
+- Cantidad de exchanges
+- Variación porcentual del mercado en las últimas 24 horas.
   
 #### Tablero de criptomonedas:
 - Logo

@@ -7,7 +7,7 @@ import Exchanges from "./Exchanges";
 import CoinPage from "./CoinPage";
 import ExchangePage from "./ExchangePage";
 import Footer from "./Footer";
-import "./App.css";
+import "./css/App.css";
 
 class App extends React.Component {
   render() {

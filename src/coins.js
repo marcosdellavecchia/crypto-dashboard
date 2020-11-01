@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import NumberFormat from "react-number-format";
 import Loading from "./Loading";
-import "./coins.css";
+import "./css/Coins.css";
 
 class Coins extends React.Component {
   constructor(props) {

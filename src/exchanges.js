@@ -3,7 +3,7 @@ import axios from "axios";
 import NumberFormat from "react-number-format";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
-import "./exchanges.css";
+import "./css/Exchanges.css";
 
 class Exchanges extends React.Component {
   constructor(props) {

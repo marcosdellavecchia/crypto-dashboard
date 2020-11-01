@@ -3,7 +3,7 @@ import axios from "axios";
 import NumberFormat from "react-number-format";
 import Loading from "./Loading";
 import Chart from "./Chart";
-import "./coinpage.css";
+import "./css/CoinPage.css";
 
 class CoinPage extends React.Component {
   constructor(props) {

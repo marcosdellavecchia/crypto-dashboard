@@ -3,7 +3,7 @@ import axios from "axios";
 import NumberFormat from "react-number-format";
 import Loading from "./Loading";
 import ExchangeTransactions from "./ExchangeTransactions";
-import "./exchangepage.css";
+import "./css/ExchangePage.css";
 
 class ExchangePage extends React.Component {
   constructor(props) {

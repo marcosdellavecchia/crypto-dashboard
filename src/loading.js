@@ -1,6 +1,6 @@
 import React from "react";
-import "./loading.css";
-import Preloader from "./preloader.gif";
+import "./css/Loading.css";
+import Preloader from "./images/preloader.gif";
 
 const Loading = () => {
   return (

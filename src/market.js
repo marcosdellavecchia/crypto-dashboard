@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import NumberFormat from "react-number-format";
-import "./market.css";
+import "./css/Market.css";
 
 class Market extends React.Component {
   constructor(props) {

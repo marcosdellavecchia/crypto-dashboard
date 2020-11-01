@@ -1,12 +1,12 @@
 import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import Coins from "./coins";
-import Header from "./header";
-import Market from "./market";
-import Exchanges from "./exchanges";
-import CoinPage from "./coinpage";
-import ExchangePage from "./exchangepage";
-import Footer from "./footer";
+import Coins from "./Coins";
+import Header from "./Header";
+import Market from "./Market";
+import Exchanges from "./Exchanges";
+import CoinPage from "./CoinPage";
+import ExchangePage from "./ExchangePage";
+import Footer from "./Footer";
 import "./App.css";
 
 class App extends React.Component {

@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 import NumberFormat from "react-number-format";
-import Loading from "./loading";
-import ExchangeTransactions from "./exchangetransactions";
+import Loading from "./Loading";
+import ExchangeTransactions from "./ExchangeTransactions";
 import "./exchangepage.css";
 
 class ExchangePage extends React.Component {

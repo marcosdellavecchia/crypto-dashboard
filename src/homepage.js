@@ -1,7 +1,7 @@
 import React from "react";
 import Coins from "./coins";
 import Header from "./header";
-import Market from "./market";
+import Market from "./Market";
 
 import "./App.css";
 

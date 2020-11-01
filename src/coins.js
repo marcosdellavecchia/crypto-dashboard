@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import NumberFormat from "react-number-format";
-import Loading from "./loading";
+import Loading from "./Loading";
 import "./coins.css";
 
 class Coins extends React.Component {

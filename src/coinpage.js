@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 import NumberFormat from "react-number-format";
-import Loading from "./loading";
-import Chart from "./chart";
+import Loading from "./Loading";
+import Chart from "./Chart";
 import "./coinpage.css";
 
 class CoinPage extends React.Component {

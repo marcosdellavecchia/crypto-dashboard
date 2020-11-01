@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import About from "./about";
+import About from "./About";
 import "./header.css";
 
 const Header = () => {

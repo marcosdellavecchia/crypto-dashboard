@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
 import NumberFormat from "react-number-format";
-import Loading from "./Loading";
-import ExchangeTransactions from "./ExchangeTransactions";
-import "./css/ExchangePage.css";
+import Loading from "../components/Loading";
+import ExchangeTransactions from "../components/ExchangeTransactions";
+import "../css/ExchangePage.css";
 
 class ExchangePage extends React.Component {
   constructor(props) {

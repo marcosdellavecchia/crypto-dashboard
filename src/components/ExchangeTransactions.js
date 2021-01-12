@@ -1,6 +1,6 @@
 import React from "react";
 import NumberFormat from "react-number-format";
-import "./css/ExchangePage.css";
+import "../css/ExchangePage.css";
 
 class ExchangeTransactions extends React.Component {
   //Primera letra mayuscula

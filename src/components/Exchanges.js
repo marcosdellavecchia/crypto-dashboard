@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 import NumberFormat from "react-number-format";
 import { Link } from "react-router-dom";
-import Loading from "./Loading";
-import "./css/Exchanges.css";
+import Loading from "../components/Loading";
+import "../css/Exchanges.css";
 
 class Exchanges extends React.Component {
   constructor(props) {

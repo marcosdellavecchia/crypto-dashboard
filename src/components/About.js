@@ -20,48 +20,43 @@ class About extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <span onClick={this.toggle}>Acerca de</span>
+        <span onClick={this.toggle}>About</span>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader>¿Qué es Cryptoboard?</ModalHeader>
+          <ModalHeader>What is Cryptoboard about?</ModalHeader>
           <ModalBody>
             <p>
-              ¡Hola! Soy Marcos{" "}
+              Hi there! I'm Marcos{" "}
               <span role="img" aria-label="Hand">
                 👋
               </span>
-              , desarrollé este sitio mientras aprendía React JS e investigaba
-              el mercado de criptomonedas.
+              I developed this site while learning React and researching the
+              cryptocurrency ecosystem.
             </p>
             <p>
-              Cryptoboard es una plataforma que permite monitorear en tiempo
-              real la{" "}
+              Cryptoboard is a platform that allows you to monitor{" "}
               <strong>
-                cotización y las variaciones de diferentes activos
-                criptográficos
+                the price and variations of different cryptographic assets{" "}
               </strong>
-              , como así también la actividad en sus correspondientes mercados
+              in real time, as well as the activity in their corresponding
+              markets.
             </p>
             <p>
-              El código es público y podés utilizarlo en tu propio desarrollo si
-              así lo deseas{" "}
-              <span role="img" aria-label="Laptop">
-                💻
-              </span>
-              . Acá te dejo el{" "}
+              The code is open source and you could use it in your own
+              development if you wish to. Here is the{" "}
               <a
                 href="https://github.com/marcosdellavecchia/crypto-dashboard"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <strong>repositorio de GitHub</strong>
+                <strong>GitHub repository</strong>
               </a>
               .
             </p>
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>
-              Volver al sitio
+              Go back
             </Button>
           </ModalFooter>
         </Modal>

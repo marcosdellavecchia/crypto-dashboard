@@ -22,7 +22,7 @@ class Footer extends React.Component {
               rel="noopener noreferrer"
             >
               {" "}
-              Código fuente
+              Source code
             </a>
             <a
               href="https://www.coingecko.com/api/documentations/v3"
@@ -34,7 +34,7 @@ class Footer extends React.Component {
           </div>
 
           <div className="footer-item">
-            <h6>REDES SOCIALES</h6>
+            <h6>SOCIAL MEDIA</h6>
             <div className="social">
               <a
                 href="https://twitter.com/marcosdv"
@@ -61,13 +61,13 @@ class Footer extends React.Component {
           </div>
 
           <div className="footer-item">
-            <h6>CRÉDITOS</h6>
+            <h6>CREDITS</h6>
             <p>
-              Hecho con{" "}
+              Made with{" "}
               <span role="img" aria-hidden="true">
                 💙
               </span>{" "}
-              por Marcos DV
+              by Marcos DV
             </p>
           </div>
         </div>

@@ -12,7 +12,7 @@ class Chart extends React.Component {
         backgroundColor: gradient,
         datasets: [
           {
-            label: "Precio de " + this.props.coin + " (USD)",
+            label: this.props.coin + " price (USD)",
             data: this.props.prices,
             fill: true,
             borderColor: "rgb(60, 120, 230)",

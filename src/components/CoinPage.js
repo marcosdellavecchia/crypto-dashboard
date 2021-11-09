@@ -109,7 +109,7 @@ class CoinPage extends React.Component {
             <div className="col-md-4 centrar-vertical">
               <div className="row coin-page">
                 <p>
-                  Precio actual:{" "}
+                  Current price:{" "}
                   <NumberFormat
                     className="crypto-data"
                     value={this.state.coindata.market_data.current_price.usd}
@@ -123,7 +123,7 @@ class CoinPage extends React.Component {
               </div>
               <div className="row coin-page">
                 <p>
-                  Precio máx. ult. 24 horas:{" "}
+                  Max price. (last 24 hours):{" "}
                   <NumberFormat
                     className="crypto-data"
                     value={this.state.coindata.market_data.high_24h.usd}
@@ -137,7 +137,7 @@ class CoinPage extends React.Component {
               </div>
               <div className="row coin-page">
                 <p>
-                  Precio min. ult. 24 horas:{" "}
+                  Min price. (last 24 hours):{" "}
                   <NumberFormat
                     className="crypto-data"
                     value={this.state.coindata.market_data.low_24h.usd}
@@ -154,7 +154,7 @@ class CoinPage extends React.Component {
             <div className="col-md-4 centrar-vertical">
               <div className="row coin-page">
                 <p>
-                  Capitalización de mercado:{" "}
+                  Market capitalization:{" "}
                   <NumberFormat
                     className="crypto-data"
                     value={this.state.coindata.market_data.market_cap.usd}
@@ -168,7 +168,7 @@ class CoinPage extends React.Component {
               </div>
               <div className="row coin-page">
                 <p>
-                  Ranking según capitalización: #
+                  Market capitalization ranking: #
                   <span className="crypto-data">
                     {this.state.coindata.market_data.market_cap_rank}{" "}
                   </span>
@@ -176,7 +176,7 @@ class CoinPage extends React.Component {
               </div>
               <div className="row coin-page">
                 <p>
-                  Sitio oficial:{" "}
+                  Official website:{" "}
                   <a
                     className="crypto-data"
                     href={this.state.coindata.links.homepage}
@@ -191,14 +191,24 @@ class CoinPage extends React.Component {
           </div>
           <hr />
           <h3 className="text-center subtitle">
-            Evolución de {this.state.coindata.name} en los últimos 30 días
+            {this.state.coindata.name} evolution during last month
           </h3>
+
           <div className="col-md-12 chart">
             <Chart
               dates={this.state.chartDates}
               prices={this.state.chartValues}
               coin={this.state.coindata.name}
             />
+          </div>
+          <div className="container">
+            <p className="text-secondary">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: this.state.coindata.description.en,
+                }}
+              ></div>
+            </p>
           </div>
         </div>
       </React.Fragment>

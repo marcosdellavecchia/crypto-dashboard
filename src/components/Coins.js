@@ -43,13 +43,13 @@ class Coins extends React.Component {
         <div className="container board-header">
           <div className="col-md-2">Logo</div>
           <div id="coin-symbol" className="col-md-2">
-            Símbolo
+            Symbol
           </div>
-          <div className="col-md-2">Nombre</div>
-          <div className="col-md-2">Cotización</div>
-          <div className="col-md-2">Variación (24h)</div>
+          <div className="col-md-2">Name</div>
+          <div className="col-md-2">Price</div>
+          <div className="col-md-2">Variation (24h)</div>
           <div id="coin-marketcap" className="col-md-2">
-            Capitalización
+            Capitalization
           </div>
         </div>
         <div className="container board">
@@ -130,7 +130,7 @@ class Coins extends React.Component {
             className="view-more-button"
             id="view-more-button"
           >
-            Ver más
+            View more
           </button>
         </div>
       </React.Fragment>

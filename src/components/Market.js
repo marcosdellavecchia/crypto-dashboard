@@ -23,7 +23,7 @@ class Market extends React.Component {
       <div className="market-box">
         <div className="container market-data">
           <div className="market-item">
-            <h4>Monedas</h4>
+            <h4>Coins</h4>
             <p>{this.state.global.active_cryptocurrencies}</p>
           </div>
           <div className="market-item">
@@ -31,11 +31,11 @@ class Market extends React.Component {
             <p>{this.state.global.ongoing_icos}</p>
           </div>
           <div className="market-item">
-            <h4>Mercados</h4>
+            <h4>Exchanges</h4>
             <p>{this.state.global.markets}</p>
           </div>
           <div className="market-item">
-            <h4>Variación (ult. 24h)</h4>
+            <h4>Overall variation (last 24h)</h4>
             <p>
               <NumberFormat
                 className="market-item"

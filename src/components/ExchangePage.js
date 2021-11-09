@@ -62,7 +62,7 @@ class ExchangePage extends React.Component {
             <div className="col-md-4 exchange-page centrar-vertical">
               <div className="row">
                 <p>
-                  Ubicación:{" "}
+                  Location:{" "}
                   <span className="crypto-data">
                     {this.state.exchangeData.country}
                   </span>
@@ -70,7 +70,7 @@ class ExchangePage extends React.Component {
               </div>
               <div className="row">
                 <p>
-                  Año de creación:
+                  Foundation year:
                   <span className="crypto-data">
                     {" "}
                     {this.state.exchangeData.year_established}
@@ -79,7 +79,7 @@ class ExchangePage extends React.Component {
               </div>
               <div className="row">
                 <p>
-                  Centralizado:{" "}
+                  Centralized:{" "}
                   <span className="crypto-data">
                     {this.state.exchangeData.centralized ? "Si" : "No"}
                   </span>
@@ -90,7 +90,7 @@ class ExchangePage extends React.Component {
             <div className="col-md-4 exchange-page centrar-vertical">
               <div className="row">
                 <p>
-                  Volumen (últ 24h):{" "}
+                  Volume (last 24h):{" "}
                   <NumberFormat
                     className="crypto-data"
                     value={this.state.exchangeData.trade_volume_24h_btc}
@@ -104,7 +104,7 @@ class ExchangePage extends React.Component {
               </div>
               <div className="row">
                 <p>
-                  Ranking de confianza: #
+                  Trust ranking: #
                   <span className="crypto-data">
                     {this.state.exchangeData.trust_score_rank}
                   </span>
@@ -112,7 +112,7 @@ class ExchangePage extends React.Component {
               </div>
               <div className="row">
                 <p>
-                  Sitio oficial:{" "}
+                  Official website:{" "}
                   <a
                     className="crypto-data"
                     href={this.state.exchangeData.url}
@@ -128,7 +128,7 @@ class ExchangePage extends React.Component {
           <hr />
           <br />
           <h3 className="text-center subtitle">
-            Detalle de transacciones en {this.state.exchangeData.name}
+            {this.state.exchangeData.name} transactions detail
           </h3>
 
           {/* INFORMACION SOBRE TRANSACCIONES */}
@@ -138,12 +138,12 @@ class ExchangePage extends React.Component {
           />
           <br />
           <p className="text-center" style={{ lineHeight: 0.8 }}>
-            Estos datos acerca del exchange {this.state.exchangeData.name}{" "}
-            fueron obtenidos a través de la base de datos de CoinGecko.
+            This data about the exchange {this.state.exchangeData.name} was
+            obtained through the CoinGecko database.
           </p>
           <p className="text-center" style={{ lineHeight: 0.9 }}>
-            Para obtener más información, no olvides visitar el sitio web
-            oficial indicado en la descripción.
+            For more information, don't forget to visit the official website
+            linked in the description above.
           </p>
         </div>
       </React.Fragment>

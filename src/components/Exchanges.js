@@ -43,14 +43,14 @@ class Exchanges extends React.Component {
             Ranking
           </div>
           <div className="col-md-1">Logo</div>
-          <div className="col-md-3">Nombre</div>
+          <div className="col-md-3">Name</div>
           <div id="exchange-country" className="col-md-3">
-            Ubicación
+            Location
           </div>
           <div id="exchange-year" className="col-md-1">
-            Año
+            Year
           </div>
-          <div className="col-md-3">Volumen BTC (últ. 24h)</div>
+          <div className="col-md-3">BTC Volume (last 24h)</div>
         </div>
         <div className="container board">
           {Object.keys(this.state.exchanges)

@@ -31,12 +31,22 @@ const Header = () => {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
-                  Monedas
+                  Coins
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/exchanges">
                   Exchanges
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  onClick={() =>
+                    alert("Oops! This feature is being developed :)")
+                  }
+                >
+                  Convert
                 </Link>
               </li>
               <li className="nav-item">

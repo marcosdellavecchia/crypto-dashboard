@@ -102,7 +102,7 @@ class Exchanges extends React.Component {
             className="view-more-button"
             id="view-more-button"
           >
-            Ver más
+            View more
           </button>
         </div>
       </React.Fragment>

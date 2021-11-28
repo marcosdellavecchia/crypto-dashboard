@@ -27,7 +27,7 @@ class Market extends React.Component {
             <p>{this.state.global.active_cryptocurrencies}</p>
           </div>
           <div className="market-item">
-            <h4>ICOs en curso</h4>
+            <h4>Ongoing ICOs</h4>
             <p>{this.state.global.ongoing_icos}</p>
           </div>
           <div className="market-item">
